@@ -1,0 +1,1 @@
+SimplePreIntegratedVolumeRenderer.exe 512 512 168 multislice_full.nhdr multislice_quarter_256_segmentada.nhdr multislice_tumor_segmentado.nhdr multislice_drenagem_segmentos.nhdr multislice_porta_esq_dir.nhdr 1125 0

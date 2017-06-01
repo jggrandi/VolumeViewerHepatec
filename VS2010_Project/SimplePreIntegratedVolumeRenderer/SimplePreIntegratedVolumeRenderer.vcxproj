@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{92F2D68D-0283-4CE6-BA41-461CAE4F8E77}</ProjectGuid>
+    <RootNamespace>SimplePreIntegratedVolumeRenderer</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)..\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)..\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>..\..\..\includes\dirent;..\..\..\includes\Glew\include;..\..\..\includes\shared\include;..\..\..\includes\glut;..\..\..\includes\boost_1_34_0;..\..\..\includes\teem-1.8.0-win32\include;..\..\..\includes\glui-2.35\src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>glui32.lib;glut32.lib;glu32.lib;opengl32.lib;odbc32.lib;odbccp32.lib;glew32.lib;bz2.lib;png.lib;teem.lib;z.lib;SharedLibs.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>..\..\..\includes\Glew\lib;..\..\..\includes\glut;..\..\..\includes\teem-1.8.0-win32\lib\shared;..\..\..\includes\glui-2.35\src\msvc\lib_debug;..\..\..\includes\shared\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\..\includes\dirent;..\..\..\includes\Glew\include;..\..\..\includes\shared\include;..\..\..\includes\glut;..\..\..\includes\boost_1_34_0;..\..\..\includes\teem-1.8.0-win32\include;..\..\..\includes\glui-2.35\src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>glui32.lib;glut32.lib;glu32.lib;opengl32.lib;odbc32.lib;odbccp32.lib;glew32.lib;bz2.lib;png.lib;teem.lib;z.lib;SharedLibs.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\includes\Glew\lib;..\..\..\includes\glut;..\..\..\includes\teem-1.8.0-win32\lib\shared;..\..\..\includes\glui-2.35\src\msvc\lib_release;..\..\..\includes\shared\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\SimplePreIntegratedVolumeRenderer\dcimage.cpp" />
+    <ClCompile Include="..\..\SimplePreIntegratedVolumeRenderer\main.cpp" />
+    <ClCompile Include="..\..\SimplePreIntegratedVolumeRenderer\mesh.cpp" />
+    <ClCompile Include="..\..\SimplePreIntegratedVolumeRenderer\objloader.cpp" />
+    <ClCompile Include="..\..\SimplePreIntegratedVolumeRenderer\SimpleMeasure.cpp" />
+    <ClCompile Include="..\..\SimplePreIntegratedVolumeRenderer\Volume.cpp" />
+    <ClCompile Include="..\..\SimplePreIntegratedVolumeRenderer\VolumeArray.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\SimplePreIntegratedVolumeRenderer\dcimage.h" />
+    <ClInclude Include="..\..\SimplePreIntegratedVolumeRenderer\mesh.h" />
+    <ClInclude Include="..\..\SimplePreIntegratedVolumeRenderer\objloader.h" />
+    <ClInclude Include="..\..\SimplePreIntegratedVolumeRenderer\resource.h" />
+    <ClInclude Include="..\..\SimplePreIntegratedVolumeRenderer\SimpleMeasure.h" />
+    <ClInclude Include="..\..\SimplePreIntegratedVolumeRenderer\Volume.h" />
+    <ClInclude Include="..\..\SimplePreIntegratedVolumeRenderer\VolumeArray.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\bin\preIntegrationPixelShader.glsl" />
+    <None Include="..\..\bin\preIntegrationVertexShader.glsl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

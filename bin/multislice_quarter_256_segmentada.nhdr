@@ -1,0 +1,9 @@
+NRRD0001
+content: body01
+dimension: 3
+type: short
+sizes: 256 256 43
+spacings: 1 1 5
+endian: little
+data file: ./multislice_quarter_256_segmentada.gz
+encoding: gzip

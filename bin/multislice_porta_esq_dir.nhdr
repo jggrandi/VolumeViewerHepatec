@@ -1,0 +1,9 @@
+NRRD0001
+content: body01
+dimension: 3
+type: short
+sizes: 512 512 168
+spacings: 1 1 1.25
+endian: little
+data file: ./multislice_porta_esq_dir.gz
+encoding: gzip
